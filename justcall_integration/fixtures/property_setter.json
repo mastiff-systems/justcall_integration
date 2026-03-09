@@ -1,0 +1,18 @@
+[
+ {
+  "default_value": null,
+  "doc_type": "TP Call Log",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "recording_url",
+  "is_system_generated": 0,
+  "modified": "2026-03-07 17:36:51.842221",
+  "module": "Justcall Integration",
+  "name": "TP Call Log-recording_url-fieldtype",
+  "property": "fieldtype",
+  "property_type": "Select",
+  "row_name": null,
+  "value": "Text"
+ }
+]
