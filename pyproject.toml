@@ -19,6 +19,13 @@ build-backend = "flit_core.buildapi"
 [tool.bench.dev-dependencies]
 # package_name = "~=1.1.0"
 
+[tool.bench.frappe-dependencies]
+# Frappe Cloud reads this to validate the app against the bench version. The app only uses
+# telephony.utils (TP Call Log linking) and Helpdesk HD Ticket / HD Form Script.
+frappe = ">=16.0.0,<17.0.0"
+helpdesk = ">=1.30.0,<2.0.0"
+telephony = ">=0.0.1,<1.0.0"
+
 [tool.ruff]
 line-length = 110
 target-version = "py310"
