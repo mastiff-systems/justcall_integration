@@ -20,11 +20,15 @@ build-backend = "flit_core.buildapi"
 # package_name = "~=1.1.0"
 
 [tool.bench.frappe-dependencies]
-# Frappe Cloud reads this to validate the app against the bench version. The app only uses
+# Frappe Cloud validates these against the apps on the bench before every build and fails
+# the deploy ("Incompatible app version") when one does not match. The app only uses
 # telephony.utils (TP Call Log linking) and Helpdesk HD Ticket / HD Form Script.
+# frappe is pinned to the v16 major line. Helpdesk and Telephony only get a lower bound:
+# their version numbers are not stable (Helpdesk went from 1.31 to 16.1 when its version-16
+# branch was cut in 2026-11), so an upper bound only blocks updates.
 frappe = ">=16.0.0,<17.0.0"
-helpdesk = ">=1.30.0,<2.0.0"
-telephony = ">=0.0.1,<1.0.0"
+helpdesk = ">=1.30.0"
+telephony = ">=0.0.1"
 
 [tool.ruff]
 line-length = 110
